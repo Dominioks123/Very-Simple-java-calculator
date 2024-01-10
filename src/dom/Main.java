@@ -1,6 +1,5 @@
 package dom;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -46,12 +45,11 @@ public class Main {
     public static boolean validate(String op){
         String[] allowed = {"+","-","/","*"};
         boolean res = false;
-        int iteration = 0;
         for (String s : allowed) {
             if (op.equals(s)) {
                 res = true;
+                break;
             }
-            iteration++;
         }
         return (res);
     }
